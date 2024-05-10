@@ -2,7 +2,7 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 const AWS = require('aws-sdk');
- uuid  = require('uuid');
+
 
 AWS.config.update({region: 'ap-south-1', endpoint: 'http://localhost:8000'});
 const app = new Koa();
@@ -54,7 +54,7 @@ router.post('/product', async (ctx) => {
   const params = {
     TableName: 'Products',
     Item: {
-      productId:"uuid",
+      productId:"1235",
       name,
       category,
       price,
